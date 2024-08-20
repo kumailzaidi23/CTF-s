@@ -1,0 +1,7 @@
+cipher = bytes.fromhex('3A2F1C8BDF94E73AA1C6B5F85E7D8A9BB8F350D694A6DE2CE71B4C896C89DAB2')
+
+for i in range(0x00, 0xff):
+	decrypted_message = ''.join([chr(i ^ j) for j in cipher])
+	if 'flag{' in decrypted_message:
+	        print('Flag:', decrypted_message)
+	        break

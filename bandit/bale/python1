@@ -1,0 +1,14 @@
+def xor_decrypt(ciphertext, key):
+    return [hex(x ^ key)[2:].upper().zfill(8) for x in ciphertext]
+
+encrypted_message = [
+    0x3A2F1C8B, 0xDF94E73A, 0xA1C6B5F8, 0x5E7D8A9B,
+    0xB8F350D6, 0x94A6DE2C, 0xE71B4C89, 0x6C89DAB2
+]
+
+# Brute force XOR decryption with all possible keys
+for potential_key in range(256):
+    decrypted_message = xor_decrypt(encrypted_message, potential_key)
+    
+    # Print potential decryption result
+    print(f"Key {hex(potential_key)}: {' '.join(decrypted_message)}")

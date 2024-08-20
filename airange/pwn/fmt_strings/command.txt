@@ -1,0 +1,1 @@
+python3 fmt_fuzz.py | cut -d ":" -f6-7 | cut -d "'" -f2 | tr -d '\n' | cut -d '\' -f1
