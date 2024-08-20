@@ -1,0 +1,8 @@
+for i in $(cat /usr/share/wordlists/rockyou.txt)
+do
+./cancel 
+echo y
+echo $i
+
+echo "done"
+done

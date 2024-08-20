@@ -1,0 +1,1 @@
+dd if=disk bs=1 skip=1113088 of=flag.out
