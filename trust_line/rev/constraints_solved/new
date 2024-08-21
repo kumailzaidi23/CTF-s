@@ -1,0 +1,40 @@
+from z3 import *
+
+# Define variables
+local_10 = Int('local_10')
+local_14 = Int('local_14')
+local_18 = Int('local_18')
+iVar1 = Int('iVar1')
+
+# Define the constraints based on the C function logic
+constraints = [
+    (local_18 + local_10 * local_14) - iVar1 == 0x340fe872,
+    local_14 - local_10 == 0x5ee9,
+    local_18 * (-5) + iVar1 == -0x5c5c8,
+    (local_14 + iVar1) % 100000 == 0x40d3
+]
+
+# Create a solver instance
+solver = Solver()
+
+# Add constraints to the solver
+solver.add(constraints)
+
+# Check if there is a solution
+if solver.check() == sat:
+    # Get the model that satisfies the constraints
+    model = solver.model()
+    
+    # Extract the values of local_10, local_14, local_18, iVar1
+    val_local_10 = model[local_10].as_long()
+    val_local_14 = model[local_14].as_long()
+    val_local_18 = model[local_18].as_long()
+    val_iVar1 = model[iVar1].as_long()
+    
+    # Print the values
+    print(f"local_10 = {val_local_10}")
+    print(f"local_14 = {val_local_14}")
+    print(f"local_18 = {val_local_18}")
+    print(f"iVar1 = {val_iVar1}")
+else:
+    print("No solution found.")
