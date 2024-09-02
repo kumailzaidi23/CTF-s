@@ -1,6 +1,6 @@
 dung.gpr
 dung.rep/*
-trust_line/rev/reverse_dimension/pycdc
-trust_line/rev/reverse_dimension/pyinstxtractor 
+trust_line/rev/reverse_dimension/pycdc/*
+trust_line/rev/reverse_dimension/pyinstxtractor/*
 dung.lock
 dung.lock~
