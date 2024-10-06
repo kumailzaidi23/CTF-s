@@ -1,0 +1,1 @@
+curl -k https://app3-7d107-default-rtdb.firebaseio.com/.json | grep -o '"f[0-9]":"[^"]*"' | cut -d'"' -f4 | tr -d '\n' | sed 's/^/ironCTF{/;s/$/}/' | cut -d "}" -f2-3

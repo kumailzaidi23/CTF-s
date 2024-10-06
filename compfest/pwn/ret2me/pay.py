@@ -1,7 +1,7 @@
 from pwn import *
 
-p=remote("challenges.ctf.compfest.id",9013)
-# p = process("./chall")
+# p=remote("challenges.ctf.compfest.id",9013)
+p = process("./chall")
 
 p.recvuntil(b'secret : ')
 win = int(p.recvline().strip(), 16)
